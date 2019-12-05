@@ -44,6 +44,7 @@ import com.xxmassdeveloper.mpchartexample.ScrollViewActivity;
 import com.xxmassdeveloper.mpchartexample.StackedBarActivity;
 import com.xxmassdeveloper.mpchartexample.StackedBarActivityNegative;
 import com.xxmassdeveloper.mpchartexample.fragments.SimpleChartDemo;
+import com.xxmassdeveloper.mpchartexample.sportsman.SportsmanActivity;
 
 import java.util.ArrayList;
 
@@ -66,6 +67,9 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 
         // initialize the utilities
         Utils.init(this);
+
+        addExample("Sportsman Chart");
+        addExample("Sportsman", "Example Bubble Chart", SportsmanActivity.class);
 
         ////
         addExample("Line Charts");

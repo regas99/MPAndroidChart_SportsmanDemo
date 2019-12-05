@@ -32,6 +32,8 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.MPPointF;
 import com.xxmassdeveloper.mpchartexample.notimportant.DemoBase;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class BubbleChartActivity extends DemoBase implements OnSeekBarChangeListener,
@@ -107,6 +109,19 @@ public class BubbleChartActivity extends DemoBase implements OnSeekBarChangeList
         tvX.setText(String.valueOf(count));
         tvY.setText(String.valueOf(range));
 
+        BubbleData data = makeData(count, range);
+        data.setDrawValues(false);
+        data.setValueTypeface(tfLight);
+        data.setValueTextSize(8f);
+        data.setValueTextColor(Color.WHITE);
+        data.setHighlightCircleWidth(1.5f);
+
+        chart.setData(data);
+        chart.invalidate();
+    }
+
+    @NotNull
+    protected BubbleData makeData(int count, int range) {
         ArrayList<BubbleEntry> values1 = new ArrayList<>();
         ArrayList<BubbleEntry> values2 = new ArrayList<>();
         ArrayList<BubbleEntry> values3 = new ArrayList<>();
@@ -139,15 +154,7 @@ public class BubbleChartActivity extends DemoBase implements OnSeekBarChangeList
         dataSets.add(set3);
 
         // create a data object with the data sets
-        BubbleData data = new BubbleData(dataSets);
-        data.setDrawValues(false);
-        data.setValueTypeface(tfLight);
-        data.setValueTextSize(8f);
-        data.setValueTextColor(Color.WHITE);
-        data.setHighlightCircleWidth(1.5f);
-
-        chart.setData(data);
-        chart.invalidate();
+        return new BubbleData(dataSets);
     }
 
     @Override
