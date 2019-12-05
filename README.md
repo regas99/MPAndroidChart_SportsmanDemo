@@ -2,4 +2,4 @@ This is a clone of MPAndroidChart(https://github.com/PhilJay/MPAndroidChart) wit
 
 
 
-<img align="left" width="540" height="960" style="margin:0px 15px 0px 0px" src="https://github.com/regas99/MPAndroidChart_SportsmanDemo/blob/master/screenshots/sportsman.png">
+<img align="left" width="270" height="480" style="margin:0px 15px 0px 0px" src="https://github.com/regas99/MPAndroidChart_SportsmanDemo/blob/master/screenshots/sportsman.png">
